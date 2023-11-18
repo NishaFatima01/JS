@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Blue{
+            font-weight: bold;
+            color: blue;
+        }
+        .Red{
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="name">
+    <input type="text" id="rolno">
+    <input type="text" id="subject1">
+    <input type="text" id="subject2">
+    <input type="text" id="subject3">
+    <button onclick="Func()">Click</button>
+    <h1 id="naam"></h1>
+    <h1 id="num"></h1>
+    <h1 id="prom"></h1>
+    <h1 id="subj1"></h1>
+    <h1 id="subj2"></h1>
+    <h1 id="subj3"></h1>
+    
+    <h1 id="obmrk"></h1>
+    <h1 id="percent"></h1>
+    <h1 id="res"></h1>
+
+
+    <script>
+        function Func(){
+            var result;
+
+            let name = document.querySelector("#name").value 
+            console.log(name);
+
+            let rollno = document.querySelector("#rolno").value 
+            console.log(rollno);
+
+            let sub1 = document.querySelector("#subject1").value 
+            console.log(sub1);
+
+            let sub2 = document.querySelector("#subject2").value 
+            console.log(sub2);
+
+            let sub3 = document.querySelector("#subject3").value  
+            console.log(sub3);
+
+            // var yourname = document.querySelector("#naam")
+            // yourname.innerHTML = name;
+
+            // var yourrolno = document.querySelector("#num")
+            // yourrolno.innerHTML = rollno;
+
+            let obtmarks;
+
+            if(name == "" || rollno == "" || sub1 == "" || sub2 =="" || sub3 ==""){
+                var a = document.querySelector("#prom")
+                a.innerHTML = "Input Field is Required!"
+                a.style.color = 'green';
+                    }
+
+            else{
+
+                if(sub1 > 100 || sub2 > 100 || sub3 > 100){
+                    var a = document.querySelector("#prom")
+                    a.innerHTML = "Marks Should be Less than or equal to 100!"
+                    a.style.color = 'red';
+             
+                } 
+                else{
+                    obtmarks = parseInt(sub1) + parseInt(sub2) + parseInt(sub3);
+
+                    let percent = (obtmarks/300) * 100;
+
+                    // var yourname = document.querySelector("#naam")
+                    // yourname.innerHTML = name;
+
+                    // var yourrolno = document.querySelector("#num")
+                        // yourrolno.innerHTML = rollno;
+
+                    
+                    var yourname = document.querySelector("#naam")
+                    yourname.innerHTML = name;
+
+                    var yourrolno = document.querySelector("#num")
+                    yourrolno.innerHTML = rollno;
+
+                    var yoursub1 = document.querySelector("#subj1")
+                    yoursub1.innerHTML = sub1;
+
+                    var yoursub2 = document.querySelector("#subj2")
+                    yoursub2.innerHTML = sub2;
+
+                    var yoursub3 = document.querySelector("#subj3")
+                    yoursub3.innerHTML = sub3;
+
+                    var obtainedmarks = document.querySelector("#obmrk")
+                    obtainedmarks.innerHTML = obtmarks;
+
+                    var percentage = document.querySelector("#percent")
+                    percentage.innerHTML = percent;
+
+                    var marksheet = document.querySelector("#res") 
+
+
+                    if(percent >= 50){
+                        result = "PASSED";
+                        marksheet.className = "Blue";
+                    }
+                    else{
+                        result = "FAILED";
+                        marksheet.className = "Red";
+                    }
+
+                    marksheet.innerHTML = result;
+
+                    // if(result == "Passed"){
+
+                    //     marksheet.className = "Blue";
+                    // }
+                    // else{
+                    //     marksheet.className = "Red";
+                    // }
+
+
+                    console.log(marksheet);
+
+                    
+
+                    
+                }
+               
+
+            }
+            document.querySelector("#name").value="";
+            document.querySelector("#rolno").value="";
+            document.querySelector("#subject1").value="";
+            
+
+            document.querySelector("#subject2").value="";
+           
+
+            document.querySelector("#subject3").value="";
+            
+        }
+    </script>
+</body>
+</html>

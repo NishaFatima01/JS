@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var guess = prompt("Guess a number")
+        var num = Math.floor(Math.random() * (50 + 1));
+
+        // if(guess == num){
+        //     alert("Congratulations!")
+        // }
+        // else if(guess >= 51){
+        //     alert("Your guess number should be less than or equal to 50!")
+        // }
+        // else if(guess > num){
+        //     alert("Your guess number is greater than Random Number!")
+        // }
+        // else if(guess < num){
+        //     alert("Your guess number is lesser than Random Number!")
+        // }
+        console.log(num);
+
+        while(true){
+            var guess = prompt("Guess a number")
+            if(guess == 'x'){
+                break;
+            }
+            else if(guess == num){
+            alert("Congratulations!")
+                break;
+            }
+            else if(guess >= 51){
+                alert("Your guess number should be less than or equal to 50! Try Again!")
+            }
+            else if(guess > num){
+                alert("Your guess number is greater than Random Number! Try Again!")
+            }
+            else if(guess < num){
+                alert("Your guess number is lesser than Random Number! Try Again!")
+            }
+            else if(guess == 's'){
+                alert("The random number is: " + num )
+            }
+       
+        }
+
+    
+       
+    </script>
+</body>
+</html>

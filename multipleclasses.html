@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .allow{
+            font-weight: Bold;
+            color: green;
+        }
+
+        .deny{
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button>Try It</button> -->
+    <div>This is a div</div>
+
+    <script>
+        var div1 = document.querySelector("div")
+        var name = prompt("Enter Name!")
+
+        if(name == "Nisha"){
+            div1.innerHTML = "Access Granted";
+            div1.className = "allow"
+        }
+        else{
+            div1.innerHTML = "Access Denied";
+            div1.className = "deny"
+        }
+    </script>
+</body>
+</html>

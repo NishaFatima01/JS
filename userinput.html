@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var input1 = prompt("Enter a number.")
+        var input2 = prompt("Enter another number.")
+        var in1 = parseInt(input1)
+        var in2 = parseInt(input2)
+        var op = prompt("Enter an operation you want to perform between 2 numbers.")
+        var a, b, c, d=0;
+
+        function add(a, b){
+            return c = a+b;
+        }
+
+        function subtract(a, b){
+            return c = a-b;
+        }
+
+        function multiply(a, b){
+            return c = a*b;
+        }
+
+        function divide(a, b){
+            return c = a/b;
+        }
+
+        if(op == "+"){
+            alert("The operation is: " + add(in1, in2))
+        }
+        else if(op == "-"){
+            alert("The operation is: " + subtract(in1, in2))
+        }
+        else if(op == "*"){
+            alert("The operation is: " + multiply(in1, in2))
+        }
+        else if(op == "/"){
+            alert("The operation is: " + divide(in1, in2))
+        }
+     
+    </script>
+</body>
+</html>

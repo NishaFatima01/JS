@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+                         <h1>JavaScript Query Selector</h1>
+    <h1 class="myClass">Class 1</h1>
+    <p class="myClass">My Class</p>
+    <div id="firstid">
+        <p>It is the div p paragraph</p>
+        <p class="pclass"> div p class</p>
+    </div>
+    <p id="myid">It is p id</p>
+    <div id="divid">It is div id</div>
+
+    <script>
+        //Element Selector
+        var e = document.querySelector(".myClass");
+        console.log(e);
+
+        var a = document.getElementById("myid");
+        console.log(a);
+
+        var z = document.querySelector("#firstid > p");
+        z.innerHTML = "This is a paragraph."
+        // console.log(z);
+    </script>
+</body>
+</html>

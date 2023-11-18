@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var num = Math.floor(Math.random() * 100) + 2;
+        // console.log(num)
+        // alert(num)
+        var i = 1;
+        var head = 0;
+       var tail = 0;
+
+       while(i <= 100){
+            var num = Math.floor(Math.random() * (2 - 1 + 1)) + 1;
+            console.log(num)
+            if(num === 1){
+            // document.write("Heads, I win!" + "<br>")
+            head++;
+            }
+            else{
+                // document.write("Tails, You win!" + "<br>") 
+            tail++;
+            }
+            i++;
+       }
+
+       document.write("Head = " + head + "<br>");
+       document.write("Tail = " + tail + "<br>  ");
+
+       if(head > tail){
+        document.write("Head wins!")
+       }
+       else if(head == tail){
+        document.write("Tie!!")
+       }
+       else{
+        document.write("Tail wins!")
+       }
+    
+        // for(var i = 1; i <= 100; i++){
+            
+        // }
+    </script>
+</body>
+</html>

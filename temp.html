@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var temp = prompt("Enter temperature in centigrade");
+        console.log(temp);
+
+        temp1 = parseInt(temp);
+
+        if(temp1 < 0){
+            alert("It's Freezing Cold Weather!")
+        }
+        else if(temp1 >= 0 && temp1 <= 10 ){
+            alert("It's Very Cold Weather!")
+        }
+        else if( temp1 >= 11 && temp1 <= 20){
+            alert("It's Cold Weather!")
+        }
+        else if( temp1 >=21 && temp1 <=30){
+            alert("It's Normal Weather!")
+        }
+        else if( temp1 >=31 && temp1 <=40){
+            alert("It's Hot Weather!")
+        }
+        else{
+            alert("It's Very Hot Weather!")
+        }
+    </script>
+</body>
+</html>

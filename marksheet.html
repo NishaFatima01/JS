@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var rollno = prompt("Enter your roll number");
+        var name = prompt("Enter your Full Name");
+        var eng = prompt("Enter your English marks");
+        var urdu = prompt("Enter your Urdu marks");
+        var math = prompt("Enter your Math marks");
+
+        var Total_Marks = parseInt(eng) + parseInt(urdu) + parseInt(math);
+
+        var percent = (Total_Marks/300) *100
+
+        document.write("Your Roll Number is" + rollno);
+        document.write("Your Name is " + name);
+        document.write("Your English Marks is" + eng);
+        document.write("Your Urdu Marks is" + urdu);
+        document.write("Your Math Marks is" + math);
+        document.write("Total Marks:" + Total_Marks);
+        document.write("Percentage:" + percent);
+
+        if(percent>=90){
+            alert("Congrats! You are Passed.")
+        }
+        else{
+            alert("You are Failed.")
+        }
+    </script>
+</body>
+</html>
